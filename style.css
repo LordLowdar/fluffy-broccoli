@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(165, 179, 192);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.container {
+  background-color: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result {
+  border: dashed 2px black;
+  padding: 3rem 16rem;
+  border-radius: 0.5rem;
+}
+
+.run {
+  background-color: rgb(90, 23, 23);
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 20px;
+}
