@@ -26,6 +26,8 @@ body {
 }
 
 .result {
+  background-color: rgb(70, 70, 70);
+  color: black;
   border: dashed 2px black;
   padding: 3rem 16rem;
   border-radius: 0.5rem;
