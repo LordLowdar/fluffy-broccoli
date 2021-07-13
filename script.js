@@ -14,6 +14,7 @@ var upper = ["A", "B", "X", "V", "O", "S"];
 var lower = ["f", "y", "q", "l", "w", "k"];
 var special = ["!", "$", "?", "2", "7", "9"];
 var generated = [];
+var generateBtn = document.querySelector("#generate");
 
 function characterCount() {
   characterAmount = prompt(
@@ -53,5 +54,29 @@ function password() {
       generated.push(randomValue);
     }
   }
+  if (lowerCase) {
+    for (let i = 0; i < divider; i++) {
+      var randomIndex = Math.floor(Math.random() * lower.length);
+      var randomValue = lower[randomIndex];
+      generated.push(randomValue);
+    }
+  }
+  if (specialCase) {
+    for (let i = 0; i < divider; i++) {
+      var randomIndex = Math.floor(Math.random() * special.length);
+      var randomValue = special[randomIndex];
+      generated.push(randomValue);
+    }
+  }
+  writePassword();
   console.log(generated);
 }
+
+function writePassword() {
+  var password = generated;
+  var passwordText = document.getElementById("password");
+
+  passwordText.innerText = password;
+}
+
+generateBtn.addEventListener("click", characterCount);
