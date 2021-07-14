@@ -73,9 +73,9 @@ function password() {
 }
 
 function writePassword() {
-  var password = generated;
   var passwordText = document.getElementById("password");
 
+  var password = generated.join("");
   passwordText.innerText = password;
 }
 
