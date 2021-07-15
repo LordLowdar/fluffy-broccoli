@@ -10,9 +10,9 @@ var characterAmount;
 var upperCase;
 var lowerCase;
 var specialCase;
-var upper = ["A", "B", "X", "V", "O", "S"];
-var lower = ["f", "y", "q", "l", "w", "k"];
-var special = ["!", "$", "?", "2", "7", "9"];
+var upper = ["A", "B", "C", "D", "E", "F"];
+var lower = ["f", "g", "h", "i", "j", "k"];
+var special = ["!", "@", "$", "2", "7", "9"];
 var generated = [];
 var generateBtn = document.querySelector("#generate");
 
@@ -68,8 +68,19 @@ function password() {
       generated.push(randomValue);
     }
   }
-  writePassword();
+  shuffleArray();
   console.log(generated);
+}
+
+function shuffleArray() {
+  for (var i = generated.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = generated[i];
+    generated[i] = generated[j];
+    generated[j] = temp;
+  }
+  writePassword();
+  console.log(password);
 }
 
 function writePassword() {
